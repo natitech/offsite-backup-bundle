@@ -1,0 +1,12 @@
+services:
+  offsite_backup.s3_synchronizer:
+    class: Nati\OffsiteBackupBundle\S3Synchronizer
+    arguments:
+      - '@Psr\Log\LoggerInterface'
+
+  offsite_backup.sync_to_s3_command:
+    class: Nati\OffsiteBackupBundle\Command\SyncToS3Command
+    arguments:
+      - '@offsite_backup.s3_synchronizer'
+    tags:
+      - { name: 'console.command' }
