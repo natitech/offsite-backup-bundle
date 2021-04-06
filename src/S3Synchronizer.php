@@ -26,7 +26,7 @@ final class S3Synchronizer
         $this->logger->info('Start syncing path with bucket', ['path' => $path, 'bucket' => $bucket]);
 
         try {
-            (new Transfer($this->s3client(), $path, 's3://' . $bucket))->transfer();
+            (new Transfer($this->s3client(), $path, 's3://' . $bucket, ['overwrite' => false]))->transfer();
         } catch (\Exception $e) {
             $this->logger->error('Error while syncing path with bucket', ['e' => $e]);
 
