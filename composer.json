@@ -14,7 +14,7 @@
         "symfony/config": "^5.0",
         "symfony/console": "^5.0",
         "symfony/http-kernel": "^5.2",
-        "aws/aws-sdk-php": "dev-feature-upload-once@dev",
+        "aws/aws-sdk-php": "^3.174",
         "symfony/dependency-injection": "^5.2",
         "symfony/yaml": "^5.2",
         "symfony/monolog-bundle": "^3.6"
@@ -23,12 +23,5 @@
         "psr-4": {
             "Nati\\OffsiteBackupBundle\\": "src/"
         }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/natitech/aws-sdk-php",
-            "no-api": true
-        }
-    ]
+    }
 }
